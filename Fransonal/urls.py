@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from blog import views
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
-]
+    path('articulo/<slug:slug>', views.article, name='articulo_detail'),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

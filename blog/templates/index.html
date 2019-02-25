@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <h2>
+            <a href="/articulo/{{ post.slug }}">{{ post.title }}</a>
+        </h2>
+        {{ post.get_rendered | safe }}
+    {% endfor %}
+
+{% endblock %}

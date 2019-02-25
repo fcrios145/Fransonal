@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'prism.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'line_numbers.css' %}">
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+{% block content %}
+{% endblock %}
+
+<script src="{% static 'prism.js' %}"></script>
+<script src="{% static 'line_numbers.js' %}"></script>
+</body>
+</html>
