@@ -8,9 +8,13 @@ class Post(models.Model):
     title = models.CharField(max_length=300)
     description = models.TextField()
     slug = models.SlugField(null=True)
+    short_summary = models.TextField()
 
-    def get_rendered(self):
+    def get_rendered_body(self):
         return markdown.markdown(self.description, extensions=['fenced_code','codehilite', 'tables'])
+
+    def get_rendered_short_description(self):
+        return markdown.markdown(self.short_summary)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)

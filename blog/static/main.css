@@ -1,0 +1,61 @@
+body {
+    width: 800px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 2rem;
+    color: black;
+}
+
+body p {
+    line-height: 28px;
+}
+
+body header h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+
+body header h2 {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+body header h2 a {
+    text-decoration: none;
+}
+
+body h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+body h2 {
+    font-weight: 900;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+body h2 a {
+    text-decoration: none;
+    color: hotpink;
+}
+
+.wrapper {
+    margin-top: 3rem;
+}
+
+strong {
+    font-weight: bold;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-left: 15px;
+}
+
+ul {
+    list-style-type: circle;
+    padding-left: 15px;
+}
+

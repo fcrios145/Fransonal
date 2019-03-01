@@ -1,11 +1,19 @@
 {% extends 'base.html' %}
 
+{% block header %}
+    <header>
+        <h1>{{ title }}</h1>
+    </header>
+{% endblock %}
+
 {% block content %}
-    {% for post in posts %}
-        <h2>
-            <a href="/articulo/{{ post.slug }}">{{ post.title }}</a>
-        </h2>
-        {{ post.get_rendered | safe }}
-    {% endfor %}
+    <div class="wrapper">
+        {% for post in posts %}
+            <h2>
+                <a href="/articulo/{{ post.slug }}">{{ post.title }}</a>
+            </h2>
+            {{ post.get_rendered_short_description | safe }}
+        {% endfor %}
+    </div>
 
 {% endblock %}

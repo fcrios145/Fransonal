@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 
+{% block header %}
+    <header>
+        <h2>
+            <a href="/">Pakito</a>
+        </h2>
+    </header>
+{% endblock %}
+
 {% block content %}
-    <h1>{{ post.title }}</h1>
-    {{ post.get_rendered | safe }}
+    <div class="wrapper">
+        <h1>{{ post.title }}</h1>
+        {{ post.get_rendered_body | safe }}
+    </div>
 {% endblock %}

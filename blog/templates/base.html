@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
     {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'reset.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'prism.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'line_numbers.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
     <meta charset="UTF-8">
     <title>{{ title }}</title>
 </head>
 <body>
+
+{% block header %}
+{% endblock %}
 
 {% block content %}
 {% endblock %}
