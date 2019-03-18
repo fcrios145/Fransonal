@@ -12,11 +12,13 @@
 </head>
 <body>
 
-{% block header %}
-{% endblock %}
+<div class="content">
+    {% block header %}
+    {% endblock %}
 
-{% block content %}
-{% endblock %}
+    {% block content %}
+    {% endblock %}
+</div>
 
 <script src="{% static 'prism.js' %}"></script>
 <script src="{% static 'line_numbers.js' %}"></script>

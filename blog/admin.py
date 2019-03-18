@@ -11,7 +11,7 @@ class AppAdminForm(forms.ModelForm):
     class Meta:
         fields = ('title', 'description', 'short_summary')
         widgets = {
-            'description': HtmlEditor(attrs={'style': 'width: 30%; height: 100%;'}),
+            'description': HtmlEditor(attrs={'style': 'width: 30%; height: 800px !important;'}),
         }
 
 

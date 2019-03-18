@@ -9,8 +9,6 @@
 {% endblock %}
 
 {% block content %}
-    <div class="wrapper">
-        <h1>{{ post.title }}</h1>
-        {{ post.get_rendered_body | safe }}
-    </div>
+    <h1>{{ post.title }}</h1>
+    {{ post.get_rendered_body | safe }}
 {% endblock %}

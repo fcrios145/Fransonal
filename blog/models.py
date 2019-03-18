@@ -10,6 +10,9 @@ class Post(models.Model):
     slug = models.SlugField(null=True)
     short_summary = models.TextField()
 
+    def __str__(self):
+        return self.title
+
     def get_rendered_body(self):
         return markdown.markdown(self.description, extensions=['fenced_code','codehilite', 'tables'])
 
