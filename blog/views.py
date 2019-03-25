@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import markdown
-from blog.models import Post
+from blog.models import Post, Post2
 
 # Create your views here.
 def home(request):
@@ -9,6 +9,6 @@ def home(request):
 
 
 def article(request, slug):
-    post = Post.objects.filter(slug__exact=slug)[0]
-    return render(request, 'article_detail.html', {'post': post, 'title': post.title})
+    post = Post2()
+    return render(request, 'article_detail.html', {'post': post, 'title': "sad"})
 
