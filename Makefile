@@ -30,7 +30,7 @@ migrations:
 	. $(PROJECT_VENV)/activate && python $(PROJECT_ROOT)/manage.py migrate
 
 collectstatic:
-	. $(PROJECT_VENV)/activate && python $(PROJECT_ROOT)/manage.py collectstatic
+	. $(PROJECT_VENV)/activate && python $(PROJECT_ROOT)/manage.py collectstatic --noinput
 
 clean:
 	@-rm -rf static_files/
