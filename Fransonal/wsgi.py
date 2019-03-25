@@ -11,6 +11,8 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Fransonal.settings')
+ENVIRONMENT = os.environ.get('ENVIRONMENT')
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', ENVIRONMENT)
 
 application = get_wsgi_application()
