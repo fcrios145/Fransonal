@@ -8,11 +8,11 @@ PROJECT_VENV=/home/kriz/.venv/src/bin
 deploy: stop dependencies migrations collectstatic restart
 
 restart:
-	sudo systemctl nginx restart
+	sudo systemctl restart nginx
 	sudo systemctl start gunicorn.service
 
 stop:
-	sudo systemctl nginx stop
+	sudo systemctl stop nginx
 	sudo systemctl stop gunicorn.service
 
 # dependencies: requirements.txt
