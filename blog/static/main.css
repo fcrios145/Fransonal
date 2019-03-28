@@ -1,28 +1,28 @@
 body {
-    width: 800px;
-    margin: 0 auto;
+    /* width: 800px; */
+    /* margin: 0 auto; */
     font-family: 'Montserrat', sans-serif;
-    padding-top: 2rem;
+    padding-top: 3rem;
     color: black;
 }
 
 body p {
     line-height: 28px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 body header {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 body header h1 {
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 body header h2 {
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 body header h2 a {
@@ -31,14 +31,14 @@ body header h2 a {
 
 body h1 {
     font-weight: 900;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
 }
 
 body h2 {
     font-weight: 900;
-    margin: 0.5rem 0;
-    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-size: 2.5rem;
 }
 
 body h2 a {
@@ -47,7 +47,7 @@ body h2 a {
 }
 
 .wrapper {
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 strong {
@@ -62,13 +62,6 @@ ol {
 ul {
     list-style-type: circle;
     padding-left: 18px;
-    margin-bottom: 2rem;
-}
-
-@media screen and (max-width: 400px) {
-  body {
-      margin: 20px;
-      width: 320px;
-  }
+    margin-bottom: 3rem;
 }
 
