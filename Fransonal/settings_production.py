@@ -2,7 +2,7 @@ from .settings import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['155.138.213.155']
+ALLOWED_HOSTS = ['mztprogramming.com']
 
 
 # Extra places for collectstatic to find static files.
