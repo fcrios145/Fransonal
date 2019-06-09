@@ -9,7 +9,7 @@ class AppAdminForm(forms.ModelForm):
     model = Post
 
     class Meta:
-        fields = ('title', 'description', 'short_summary')
+        fields = ('title', 'description', 'short_summary', 'public',)
         widgets = {
             'description': HtmlEditor(attrs={'style': 'width: 30%; height: 800px !important;'}),
         }

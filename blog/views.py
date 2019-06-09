@@ -4,7 +4,7 @@ from blog.models import Post
 
 # Create your views here.
 def home(request):
-    posts = Post.objects.all()
+    posts = Post.get_publics()
     return render(request, 'index.html', {'posts': posts, 'title': 'MZTProgramming'})
 
 

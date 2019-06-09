@@ -9,6 +9,7 @@ class Post(models.Model):
     description = models.TextField()
     slug = models.SlugField(null=True)
     short_summary = models.TextField()
+    public = models.BooleanField(null=False, default=True)
 
     def __str__(self):
         return self.title
@@ -18,6 +19,9 @@ class Post(models.Model):
 
     def get_rendered_short_description(self):
         return markdown.markdown(self.short_summary)
+
+    def get_publics():
+        return Post.objects.filter(public=True)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
