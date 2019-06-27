@@ -1,8 +1,8 @@
 # Makefile for building and deploying
 #
 
-PROJECT_ROOT=/home/kriz/src
-PROJECT_VENV=/home/kriz/.venv/src/bin
+PROJECT_ROOT=/home/fransonal/src
+PROJECT_VENV=/home/fransonal/.venv/src/bin
 
 # deploy: dependencies clean minified_static_files
 deploy: stop dependencies migrations collectstatic restart
