@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  app:
+    environment:
+      - DATABASE_NAME=medisin_db
+      - DATABASE_USER=medisin_admin_user
+      - DATABASE_PASSWORD=123456
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/fransonal_project:/fransonal_project
+        #command: >
+        #sh -c "python manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - db
+  
+  db:
+    image: postgres:11.2-alpine
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=medisin_admin_user
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=medisin_db
+
+volumes:
+  postgres_data:
+
