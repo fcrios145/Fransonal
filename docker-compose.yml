@@ -14,8 +14,8 @@ services:
       - "8000:8000"
     volumes:
       - ./backend/fransonal_project:/fransonal_project
-        #command: >
-        #sh -c "python manage.py runserver 0.0.0.0:8000"
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
     depends_on:
       - db
   
