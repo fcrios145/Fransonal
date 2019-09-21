@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Turret+Road&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900&display=swap');
+
+html {
+    font-size: calc(1em + 1vw);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background-color: #F2F2F0;
+    margin: 0;
+}
+
+header {
+    margin-bottom: 1.5em;
+}
+
+header nav {
+    display: flex;
+    background-color: #055BA6;
+    color: white;
+    height: 115px;
+    align-items: center;
+    padding: 0 3em;
+
+}
+
+.logo-title {
+    font-family: 'Turret Road', cursive;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.articles-container {
+    font-size: 0.8em;
+}
+
+.articles-container article {
+    width: 340px;
+    height: 490px;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5em;
+}
+
+.article-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-wrapper {
+    padding: 0 25px;
+}
+
+.article-wrapper p {
+    font-weight: normal;
+    font-size: 0.65em;
+    line-height: 1.5;
+}
+
+.articles-container article div h2 {
+    font-weight: bolder;
+    font-size: 1.0em;
+    color: #F25C78;
+    margin: 0.5em 0em;
+}
+
+.article-tag {
+    font-size: 0.6em;
+    color: #0F6CA6;
+    font-weight: bold;
+}
+
+.article-date {
+    font-size: 0.6em;
+    color: #F28888;
+    font-weight: bolder;
+}
+
+.image-article {
+    width: inherit;
+    max-width: 100%;
+    height: auto;
+}
+
+.articles-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+

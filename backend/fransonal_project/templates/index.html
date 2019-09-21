@@ -1,11 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Hola mundo</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'reset.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>MztProgramming</title>
 </head>
 <body>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias consequuntur cum distinctio eos ex, incidunt
-maxime minus natus obcaecati quos vitae voluptatum? Ad autem doloribus nesciunt nobis tempora voluptate.
+<header>
+    <nav>
+        <h1 class="logo-title">MztProgramming</h1>
+    </nav>
+</header>
+<section class="articles-container">
+        <article>
+        <img class="image-article" src="{% static 'img/code.jpg' %}" alt="code_image">
+        <div class="article-wrapper">
+            <div class="article-header">
+                <span class="article-tag">Etiqueta</span>
+                <span class="article-date">13 de Septiembre del 2019</span>
+            </div>
+
+            <h2>Lorem impsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem eos error ex hic nam nihil quae
+                quo
+                voluptatibus voluptatum?</p>
+        </div>
+    </article>
+        <article>
+        <img class="image-article" src="{% static 'img/code_2.jpg' %}" alt="code_image">
+        <div class="article-wrapper">
+            <div class="article-header">
+                <span class="article-tag">Etiqueta</span>
+                <span class="article-date">13 de Septiembre del 2019</span>
+            </div>
+
+            <h2>Lorem impsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem eos error ex hic nam nihil quae
+                quo
+                voluptatibus voluptatum?</p>
+        </div>
+    </article>
+        <article>
+        <img class="image-article" src="{% static 'img/code.jpg' %}" alt="code_image">
+        <div class="article-wrapper">
+            <div class="article-header">
+                <span class="article-tag">Etiqueta</span>
+                <span class="article-date">13 de Septiembre del 2019</span>
+            </div>
+
+            <h2>Lorem impsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem eos error ex hic nam nihil quae
+                quo
+                voluptatibus voluptatum?</p>
+        </div>
+    </article>
+        <article>
+        <img class="image-article" src="{% static 'img/code.jpg' %}" alt="code_image">
+        <div class="article-wrapper">
+            <div class="article-header">
+                <span class="article-tag">Etiqueta</span>
+                <span class="article-date">13 de Septiembre del 2019</span>
+            </div>
+
+            <h2>Lorem impsum dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem eos error ex hic nam nihil quae
+                quo
+                voluptatibus voluptatum?</p>
+        </div>
+    </article>
+</section>
 </body>
 </html>
