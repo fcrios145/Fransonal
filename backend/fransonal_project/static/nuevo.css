@@ -1,0 +1,83 @@
+
+html {
+    background-color: #F2F2F0;
+}
+
+header {
+    background-color: #055BA6;
+    padding: 1rem;
+    margin-bottom: 8rem;
+}
+
+header nav {
+    color: white;
+
+}
+
+header nav h1 {
+    font-weight: bolder;
+    margin: 0;
+}
+
+.article {
+    background-color: #fff;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 4rem;
+}
+
+.article--content {
+    padding: 0.5rem 2rem 2rem 2rem;
+
+}
+
+.article--footer {
+    display: flex;
+    align-items: center;
+}
+
+.article--footer span {
+    font-weight: bolder;
+}
+
+.article--author-avatar {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 44px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.image--article {
+    width: 100%;
+    height: auto;
+}
+
+.article--header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.article--header--text {
+    font-weight: bolder;
+}
+
+.article--date {
+    color: #F28888;
+}
+
+.article--tag {
+    color: #0F6CA6;
+}
+
+.article--title {
+    color: #F25C78;
+    font-weight: bolder;
+}
+
+/* On screens that are 350px or less, set the background color to blue */
+@media screen and (max-width: 350px) {
+    header nav h1 {
+        font-size: 1.5rem;
+    }
+}

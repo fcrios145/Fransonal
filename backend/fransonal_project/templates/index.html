@@ -7,72 +7,124 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% load static %}
     <link rel="stylesheet" href="{% static 'reset.css' %}">
-    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'nuevo.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800,900&display=swap" rel="stylesheet">
     <title>MztProgramming</title>
 </head>
 <body>
 <header>
-    <nav>
-        <h1 class="logo-title">MztProgramming</h1>
+    <nav class="container">
+        <h1>MztProgramming</h1>
     </nav>
 </header>
-<section class="articles-container">
-        <article>
-        <img class="image-article" src="{% static 'img/code.jpg' %}" alt="code_image">
-        <div class="article-wrapper">
-            <div class="article-header">
-                <span class="article-tag">Etiqueta</span>
-                <span class="article-date">13 de Septiembre del 2019</span>
+<div class="container">
+    <div class="row">
+        <div class="one-half column article">
+            <img class="image--article" src="{% static 'img/code.jpg' %}" alt="">
+            <div class="article--content">
+                <div class="article--header article--header--text">
+                    <span class="article--tag">Etiqueta</span>
+                    <span class="article--date">19 de Septiembre del 2019</span>
+                </div>
+                <h4 class="article--title">Lorem Ipsum Dolo</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium ad cupiditate deleniti dolor
+                    eius fugit magnam nemo odit officia?</p>
+                <div class="article--footer">
+                    <img class="article--author-avatar" src="{% static 'img/avatar_2.jpg' %}" alt="">
+                    <span>Francisco Rios</span>
+                </div>
             </div>
-
-            <h2>Lorem impsum dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem eos error ex hic nam nihil quae
-                quo
-                voluptatibus voluptatum?</p>
         </div>
-    </article>
-        <article>
-        <img class="image-article" src="{% static 'img/code_2.jpg' %}" alt="code_image">
-        <div class="article-wrapper">
-            <div class="article-header">
-                <span class="article-tag">Etiqueta</span>
-                <span class="article-date">13 de Septiembre del 2019</span>
+        <div class="one-half column article">
+            <img class="image--article" src="{% static 'img/code.jpg' %}" alt="">
+            <div class="article--content">
+                <div class="article--header article--header--text">
+                    <span class="article--tag">Etiqueta</span>
+                    <span class="article--date">19 de Septiembre del 2019</span>
+                </div>
+                <h4 class="article--title">Lorem Ipsum Dolo</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in ipsam laborum magnam
+                    necessitatibus? Possimus!</p>
+
+                <div class="article--footer">
+                    <img class="article--author-avatar" src="{% static 'img/avatar_2.jpg' %}" alt="">
+                    <span>Francisco Rios</span>
+                </div>
             </div>
-
-            <h2>Lorem impsum dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem eos error ex hic nam nihil quae
-                quo
-                voluptatibus voluptatum?</p>
         </div>
-    </article>
-        <article>
-        <img class="image-article" src="{% static 'img/code.jpg' %}" alt="code_image">
-        <div class="article-wrapper">
-            <div class="article-header">
-                <span class="article-tag">Etiqueta</span>
-                <span class="article-date">13 de Septiembre del 2019</span>
+    </div>
+        <div class="row">
+        <div class="one-half column article">
+            <img class="image--article" src="{% static 'img/code_2.jpg' %}" alt="">
+            <div class="article--content">
+                <div class="article--header article--header--text">
+                    <span class="article--tag">Etiqueta</span>
+                    <span class="article--date">19 de Septiembre del 2019</span>
+                </div>
+                <h4 class="article--title">Lorem Ipsum Dolo</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium ad cupiditate deleniti dolor
+                    eius fugit magnam nemo odit officia?</p>
+                <div class="article--footer">
+                    <img class="article--author-avatar" src="{% static 'img/avatar_2.jpg' %}" alt="">
+                    <span>Francisco Rios</span>
+                </div>
             </div>
-
-            <h2>Lorem impsum dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem eos error ex hic nam nihil quae
-                quo
-                voluptatibus voluptatum?</p>
         </div>
-    </article>
-        <article>
-        <img class="image-article" src="{% static 'img/code.jpg' %}" alt="code_image">
-        <div class="article-wrapper">
-            <div class="article-header">
-                <span class="article-tag">Etiqueta</span>
-                <span class="article-date">13 de Septiembre del 2019</span>
+        <div class="one-half column article">
+            <img class="image--article" src="{% static 'img/code.jpg' %}" alt="">
+            <div class="article--content">
+                <div class="article--header article--header--text">
+                    <span class="article--tag">Etiqueta</span>
+                    <span class="article--date">19 de Septiembre del 2019</span>
+                </div>
+                <h4 class="article--title">Lorem Ipsum Dolo</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in ipsam laborum magnam
+                    necessitatibus? Possimus!</p>
+
+                <div class="article--footer">
+                    <img class="article--author-avatar" src="{% static 'img/avatar_2.jpg' %}" alt="">
+                    <span>Francisco Rios</span>
+                </div>
             </div>
-
-            <h2>Lorem impsum dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem eos error ex hic nam nihil quae
-                quo
-                voluptatibus voluptatum?</p>
         </div>
-    </article>
-</section>
+    </div>
+        <div class="row">
+        <div class="one-half column article">
+            <img class="image--article" src="{% static 'img/code.jpg' %}" alt="">
+            <div class="article--content">
+                <div class="article--header article--header--text">
+                    <span class="article--tag">Etiqueta</span>
+                    <span class="article--date">19 de Septiembre del 2019</span>
+                </div>
+                <h4 class="article--title">Lorem Ipsum Dolo</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium ad cupiditate deleniti dolor
+                    eius fugit magnam nemo odit officia?</p>
+                <div class="article--footer">
+                    <img class="article--author-avatar" src="{% static 'img/avatar_2.jpg' %}" alt="">
+                    <span>Francisco Rios</span>
+                </div>
+            </div>
+        </div>
+        <div class="one-half column article">
+            <img class="image--article" src="{% static 'img/code.jpg' %}" alt="">
+            <div class="article--content">
+                <div class="article--header article--header--text">
+                    <span class="article--tag">Etiqueta</span>
+                    <span class="article--date">19 de Septiembre del 2019</span>
+                </div>
+                <h4 class="article--title">Lorem Ipsum Dolo</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit in ipsam laborum magnam
+                    necessitatibus? Possimus!</p>
+
+                <div class="article--footer">
+                    <img class="article--author-avatar" src="{% static 'img/avatar_2.jpg' %}" alt="">
+                    <span>Francisco Rios</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 </body>
 </html>
