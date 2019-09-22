@@ -6,7 +6,9 @@ ENV PYTHONUNBEFFERED 1
 RUN apk update \
     && apk add gcc \
     && apk add libpq postgresql-dev \
-    && apk add build-base
+    && apk add build-base \
+    && apk add jpeg-dev \
+    && apk add zlib-dev
 
 COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
