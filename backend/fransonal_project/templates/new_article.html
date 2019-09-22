@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Nuevo articulo
+{% endblock %}
+
+
+{% block content %}
+
+    <style type="text/css" media="screen">
+        #editor {
+            width: 875%;
+            height: 91vh;
+        }
+    </style>
+
+
+
+    <div class="container-writter">
+        <div class="writter-sidebar">
+            <form method="POST">
+                {% csrf_token %}
+                <button class="sidebar--control button button-editor">Guardar</button>
+                <button class="sidebar--control button button-editor">Previsualizar</button>
+                <label class="sidebar--control" for="hero_image">Hero Image</label>
+                <input class="sidebar--control" type="file">
+                <label class="sidebar--control" for="status">Status</label>
+                <select class="sidebar--control" name="status">
+                    <option value=""></option>
+                    <option value="1">uno</option>
+                    <option value="2">Dos</option>
+                </select>
+            </form>
+        </div>
+        <div id="editor"># Nuevo</div>
+    </div>
+
+{% endblock %}
+
+
+{% block extrascripts %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/mode-markdown.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js"></script>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/dracula");
+        editor.getSession().setMode("ace/mode/markdown");
+    </script>
+{% endblock %}
+
+
+
+
+
+

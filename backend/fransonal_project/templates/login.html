@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extrastyles %}
+    <link rel="stylesheet" href="{% static 'login_2.css' %}">
+{% endblock %}
+
+{% block title %}Login{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+    <div class="login-container">
+        <div class="login-wrapper">
+            <form method="POST">
+                {% csrf_token %}
+                <input name="username" placeholder="Usuario" type="text"/>
+                <input name="password" placeholder="Contraseña" type="password"/>
+                <button class="button-editor" type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

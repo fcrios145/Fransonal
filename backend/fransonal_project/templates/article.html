@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrastyles %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+{% endblock %}
+
+{% block title %}
+    Ariculo bonito
+{% endblock %}
+
+{% block content %}
+    <img class="hero-image" src="{% static 'img/code.jpg' %}" alt="">
+    <div class="container blog-container">
+        <div class="row">
+            <h1>Lorem impsum dolo</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus nisi placeat praesentium unde! Beatae,
+                consectetur facilis itaque labore libero mollitia necessitatibus nobis obcaecati odio officia quas
+                soluta
+                suscipit unde ut!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, cumque dicta dolor, eius eos et fuga
+                inventore, ipsa
+                laboriosam laudantium libero voluptas. Atque, blanditiis corporis, cumque dignissimos ex fugiat impedit
+                iure,
+                molestias non nostrum officiis quis saepe voluptatum! Accusamus ad adipisci assumenda cum delectus dicta
+                inventore, iure labore nam officia reprehenderit saepe sunt temporibus vitae voluptatem voluptates
+                voluptatum.
+                Ab corporis, fugiat nulla numquam repellendus vero. Alias aliquam aliquid architecto assumenda at atque
+                beatae
+                culpa <strong>cupiditate</strong> dignissimos dolor dolorem dolorum eos, fugiat hic illo illum impedit
+                ipsa iure maiores
+                odit
+                quam qui quod recusandae sed suscipit temporibus totam vel velit vitae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aperiam at blanditiis cupiditate
+                distinctio dolor dolore, enim id maiores odit pariatur, placeat quia veritatis vitae voluptas
+                voluptatum? Accusantium aliquam aut commodi debitis delectus exercitationem ipsum iste iusto magni neque
+                nesciunt, odit rem repudiandae sapiente sed ullam voluptatem. Architecto earum harum laborum quae quasi
+                sapiente tempora. Animi consectetur ducimus in magnam minus mollitia natus nemo, neque nisi nobis porro
+                quas quia, quibusdam quidem quos rem soluta ut? A aliquid amet asperiores aspernatur at aut beatae
+                consequatur consequuntur debitis deleniti dolor doloremque ea eaque explicabo facilis id inventore iste
+                iure laboriosam magni molestiae nam neque nesciunt odio officia officiis porro possimus quaerat
+                quibusdam quis quod rem totam unde ut velit, vero voluptatibus. Amet aperiam error expedita iure
+                molestiae nam nisi nobis possimus quam quasi, rem repellat rerum sunt temporibus, tenetur unde velit? At
+                in possimus sunt! Corporis ipsam sunt tempora totam voluptatem. Aliquam aliquid animi aut consectetur
+                consequatur cum dolores ducimus earum et hic, illum in ipsa ipsum iste iusto laborum libero maxime nemo
+                nihil nostrum omnis quae quaerat quis quisquam reiciendis soluta veniam veritatis vero voluptas
+                voluptatem. Earum, eveniet, magni. Accusantium aspernatur autem error facere ipsum iste, iusto
+                recusandae tempora!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at, dolores molestiae nam possimus
+                quod similique tempora vel. A debitis incidunt laboriosam minus mollitia officia, quos rem voluptas. Ad,
+                alias, aperiam dolorum eaque eligendi fugiat harum possimus quam quis sapiente tenetur voluptate,
+                voluptatibus. A aliquam commodi dolores ea, enim error et facere hic ipsam iusto molestias neque non qui
+                similique tempora, tempore tenetur ullam veritatis! Earum enim eos et laborum quae, reprehenderit saepe.
+                Aspernatur aut dignissimos dolore et molestiae. Accusamus beatae eum laboriosam obcaecati totam.
+                Accusantium autem consectetur consequatur corporis, cum cumque deserunt dolores dolorum eaque eligendi
+                et fugit ipsam labore, libero maiores natus nisi obcaecati odit pariatur quam quia repellendus sequi
+                similique! Aspernatur autem dicta dignissimos, dolor dolorum enim est ipsum labore libero magnam, maxime
+                necessitatibus nemo odit officia officiis perspiciatis quidem rerum sequi tempore ullam. Ab adipisci
+                asperiores cupiditate distinctio dolorem dolorum earum enim et explicabo impedit itaque molestiae natus
+                nesciunt, quaerat quasi repudiandae sequi voluptatibus! Eos, inventore, velit! Aspernatur dignissimos
+                eveniet fuga libero magnam mollitia quas tempora voluptas voluptatibus. Ad aspernatur debitis dicta
+                dignissimos, dolor dolores ducimus eaque expedita fugiat inventore ipsam ipsum iusto laboriosam
+                laudantium placeat quae, repellat sequi sit sunt totam unde velit voluptates. A alias aliquam aperiam
+                architecto beatae consequatur cum dicta dignissimos ducimus facilis ipsa iste iure labore laborum magni,
+                maiores maxime minima nesciunt nulla obcaecati perferendis praesentium quae quis quisquam repellat
+                tempore ut. A ab architecto, aut culpa dicta dolore ducimus eaque id maxime nihil officiis omnis quia
+                ratione vero vitae, voluptas.</p>
+            <pre><code class="js">
+                console.log('asdasd');
+                alert('adsasd');
+            </code></pre>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block extrascripts %}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script src="{% static 'js/code.js' %}"></script>
+{% endblock %}
