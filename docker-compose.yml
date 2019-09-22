@@ -3,8 +3,8 @@ version: "3"
 services:
   app:
     environment:
-      - DATABASE_NAME=medisin_db
-      - DATABASE_USER=medisin_admin_user
+      - DATABASE_NAME=fransonal_db
+      - DATABASE_USER=fransonal_user
       - DATABASE_PASSWORD=123456
       - DATABASE_HOST=db
       - DATABASE_PORT=5432
@@ -26,9 +26,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=medisin_admin_user
+      - POSTGRES_USER=fransonal_user
       - POSTGRES_PASSWORD=123456
-      - POSTGRES_DB=medisin_db
+      - POSTGRES_DB=fransonal_db
 
 volumes:
   postgres_data:
