@@ -20,13 +20,14 @@
 
     <div class="container-writter">
         <div class="writter-sidebar">
-            <form method="POST">
+            <form id="editor-form" method="POST">
                 {% csrf_token %}
                 <button class="sidebar--control button button-editor">Guardar</button>
                 <button class="sidebar--control button button-editor">Previsualizar</button>
                 <label class="sidebar--control" for="hero_image">Hero Image</label>
-                <input class="sidebar--control" type="file">
+                <input  class="sidebar--control" type="file">
                 <label class="sidebar--control" for="status">Status</label>
+                <input id="raw_content" type="hidden" name="raw_content" value="valorsito">
                 <select class="sidebar--control" name="status">
                     <option value=""></option>
                     <option value="1">uno</option>
@@ -47,6 +48,9 @@
         var editor = ace.edit("editor");
         editor.setTheme("ace/theme/dracula");
         editor.getSession().setMode("ace/mode/markdown");
+        document.getElementById('editor-form').addEventListener('submit', function(event) {
+           document.getElementById('raw_content').value = editor.getValue()
+        });
     </script>
 {% endblock %}
 

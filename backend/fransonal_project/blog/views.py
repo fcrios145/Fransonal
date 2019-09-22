@@ -17,6 +17,8 @@ def article(request):
 
 @login_required(login_url='login')
 def new_article(request):
+    if(request.method == 'POST'):
+        print(request.POST["raw_content"])
     return render(request, 'new_article.html')
 
 
