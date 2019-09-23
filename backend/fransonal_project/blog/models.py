@@ -27,7 +27,7 @@ class Tag(models.Model):
 
 class Article(TimestampedModel):
     name = models.CharField(max_length=100, null=False, unique=True)
-    hero_image = models.ImageField(upload_to='images/', null=True)
+    hero_image = models.ImageField(upload_to='images/', null=False, blank=True, default='images/default.jpg')
     status = models.ForeignKey(Status, on_delete=models.CASCADE, default=1)
     raw_content = models.TextField(default='')
     compiled_content = models.TextField(default='')
