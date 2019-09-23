@@ -11,6 +11,11 @@ class ArticleForm(ModelForm):
             'status': Select(attrs={'class': 'sidebar--control select-css'}),
             'hero_image': FileInput(attrs={'class': 'sidebar--control select-css'}),
             'tags': SelectMultiple(attrs={'class': 'sidebar--control sidebar--control--multiselect select-css'}),
-            'raw_content': HiddenInput(),
-            'short_content': Textarea(attrs={'class': 'sidebar--control select-css'})
+            'short_content': Textarea(attrs={'class': 'sidebar--control select-css'}),
+            'raw_content': HiddenInput()
+        }
+        error_messages = {
+            'raw_content': {
+                'required': ("Favor de escribir algo en el editor :C"),
+            },
         }

@@ -26,6 +26,8 @@
 
                 {{ form.raw_content }}
 
+                {{ form.raw_content.errors }}
+
                 <button type="submit" class="sidebar--control button button-editor">Guardar</button>
                 <button class="sidebar--control button button-editor">Previsualizar</button>
 
@@ -48,6 +50,8 @@
                 <label class="sidebar--control" for="{{ form.short_content.id_for_label }}">Short Content</label>
                 {{ form.short_content }}
                 {{ form.short_content.errors }}
+
+
             </form>
 
         </div>

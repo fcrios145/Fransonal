@@ -31,12 +31,18 @@ header nav h1 {
     margin: 0;
 }
 
+.errorlist {
+    color: white;
+    font-weight: bolder;
+}
+
 .article-container {
     margin-top: 8rem;
     /*border: 1px solid gold;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .article {
