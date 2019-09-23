@@ -10,7 +10,20 @@ header {
 
 header nav {
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+}
+
+header nav ul {
+    display: flex;
+    margin: 0;
+}
+
+header nav ul li {
+    list-style-type: none;
+    margin: 0 2rem;
 }
 
 header nav h1 {
@@ -112,8 +125,29 @@ header nav h1 {
 
 .sidebar--control {
     width: 100%;
+    color: white;
+    font-weight: bolder;
 }
 
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+.sidebar--control--multiselect {
+    height: 100%;
+}
+
+
+.select-css {
+    color: #222;
+}
 
 .button-editor {
     margin: 1rem 0;

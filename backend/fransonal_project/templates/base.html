@@ -19,6 +19,11 @@
     <header>
         <nav class="container">
             <h1>MztProgramming</h1>
+            <ul>
+                {% if authenticated %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% endif %}
+            </ul>
         </nav>
     </header>
 {% endblock %}

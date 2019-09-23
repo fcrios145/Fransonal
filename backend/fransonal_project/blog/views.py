@@ -4,6 +4,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login as do_login
 from django.contrib.auth import logout as do_logout
 from django.contrib.auth.decorators import login_required
+from .forms import ArticleForm
 
 
 # Create your views here.
@@ -18,8 +19,11 @@ def article(request):
 @login_required(login_url='login')
 def new_article(request):
     if(request.method == 'POST'):
+        form = ArticleForm(request.POST)
         print(request.POST["raw_content"])
-    return render(request, 'new_article.html')
+    else:
+        form = ArticleForm()
+    return render(request, 'new_article.html', {'authenticated': request.user.is_authenticated, 'form': form})
 
 
 def logout(request):

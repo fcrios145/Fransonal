@@ -21,19 +21,31 @@
     <div class="container-writter">
         <div class="writter-sidebar">
             <form id="editor-form" method="POST">
+                {{ form.non_field_errors }}
                 {% csrf_token %}
-                <button class="sidebar--control button button-editor">Guardar</button>
-                <button class="sidebar--control button button-editor">Previsualizar</button>
-                <label class="sidebar--control" for="hero_image">Hero Image</label>
-                <input  class="sidebar--control" type="file">
-                <label class="sidebar--control" for="status">Status</label>
+
                 <input id="raw_content" type="hidden" name="raw_content" value="valorsito">
-                <select class="sidebar--control" name="status">
-                    <option value=""></option>
-                    <option value="1">uno</option>
-                    <option value="2">Dos</option>
-                </select>
+
+                <button type="submit" class="sidebar--control button button-editor">Guardar</button>
+                <button class="sidebar--control button button-editor">Previsualizar</button>
+
+                <label class="sidebar--control" for="{{ form.name.id_for_label }}">Nombre</label>
+                {{ form.name }}
+                {{ form.name.errors }}
+
+                <label class="sidebar--control" for="{{ form.hero_image.id_for_label }}">Hero image</label>
+                {{ form.hero_image }}
+                {{ form.hero_image.errors }}
+
+                <label class="sidebar--control" for="{{ form.status.id_for_label }}">Status</label>
+                {{ form.status }}
+                {{ form.status.errors }}
+
+                <label class="sidebar--control" for="{{ form.tags.id_for_label }}">Tags</label>
+                {{ form.tags }}
+                {{ form.tags.errors }}
             </form>
+
         </div>
         <div id="editor"># Nuevo</div>
     </div>
@@ -48,8 +60,8 @@
         var editor = ace.edit("editor");
         editor.setTheme("ace/theme/dracula");
         editor.getSession().setMode("ace/mode/markdown");
-        document.getElementById('editor-form').addEventListener('submit', function(event) {
-           document.getElementById('raw_content').value = editor.getValue()
+        document.getElementById('editor-form').addEventListener('submit', function (event) {
+            document.getElementById('raw_content').value = editor.getValue()
         });
     </script>
 {% endblock %}
