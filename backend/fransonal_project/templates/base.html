@@ -21,6 +21,8 @@
             <h1>MztProgramming</h1>
             <ul>
                 {% if authenticated %}
+                    <li><a href="{% url 'nuevo_articulo' %}">Nuevo</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% endif %}
             </ul>

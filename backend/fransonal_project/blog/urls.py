@@ -18,8 +18,10 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('articulo', views.article, name='articulo'),
-    path('nuevo', views.new_article, name='nuevo_articulo'),
+    # path('articulo', views.article, name='articulo'),
+    path('articulo/<slug:slug>', views.article, name='articulo'),
+    path('editor', views.new_article, name='nuevo_articulo'),
+    path('editor/<slug:slug>', views.new_article, name='editar_articulo'),
     path('login', views.login, name='login'),
     path('logout', views.logout, name='logout'),
 

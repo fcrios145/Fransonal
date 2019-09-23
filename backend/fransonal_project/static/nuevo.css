@@ -33,12 +33,26 @@ header nav h1 {
 
 .article-container {
     margin-top: 8rem;
+    /*border: 1px solid gold;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .article {
     background-color: #fff;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
     margin-bottom: 4rem;
+    /*border:1px solid red;*/
+    width: 48%;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    height: 100%;
+}
+
+.article:hover {
+    color: black;
 }
 
 .article--content {
@@ -162,5 +176,12 @@ header nav h1 {
 @media screen and (max-width: 350px) {
     header nav h1 {
         font-size: 1.5rem;
+    }
+}
+
+/* On screens that are 350px or less, set the background color to blue */
+@media screen and (max-width: 800px) {
+    .article {
+        width: 100%;
     }
 }
