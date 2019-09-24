@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import pre_save
 from django.template.defaultfilters import  slugify
+from django.urls import reverse
 import markdown
 
 
@@ -35,6 +36,20 @@ class Article(TimestampedModel):
     short_content = models.TextField(max_length=150, default='')
     slug = models.SlugField(null=True)
 
+    def get_absolute_url(self):
+        return reverse('articulo', kwargs={
+            'slug': self.slug
+        })
+
+    def get_update_url(self):
+        return reverse('editar_articulo', kwargs={
+            'slug': self.slug
+        })
+
+    # def get_delete_url(self):
+    #     return reverse('post-delete', kwargs={
+    #         'pk': self.pk
+    #     })
 
 
 def pre_save_article(sender, instance, **kwargs):

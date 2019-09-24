@@ -1,46 +1,65 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login as do_login
 from django.contrib.auth import logout as do_logout
 from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from django.views.generic import View, DetailView, CreateView, UpdateView
 from .forms import ArticleForm
 from .models import Article
 
 
-# Create your views here.
-def home(request):
-    articles = Article.objects.all()
-    return render(request, 'index.html', {'authenticated': request.user.is_authenticated, 'articles': articles})
+class HomeView(View):
+    def get(self, request, *args, **kwargs):
+        articles = Article.objects.all()
+        return render(request, 'index.html', {'authenticated': request.user.is_authenticated, 'articles': articles})
 
 
-def article(request, slug):
-    article = Article.objects.get(slug=slug)
-    return render(request, 'article.html', {'authenticated': request.user.is_authenticated, 'article': article})
+class ArticleDetailView(DetailView):
+    model = Article
+    template_name = 'article.html'
+    context_object_name = 'article'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['authenticated'] = self.request.user.is_authenticated
+        return context
 
 
-@login_required(login_url='login')
-def new_article(request, slug=''):
-    if(request.method == 'POST'):
-        try:
-            article =  Article.objects.get(slug=slug)
-        except Article.DoesNotExist:
-            article = None
-        if(article):
-            form = ArticleForm(request.POST, request.FILES, instance=article)
-        else:
-            form = ArticleForm(request.POST, request.FILES)
-        if(form.is_valid()):
-            form.save()
-            return redirect('nuevo_articulo')
-    else:
-        if(slug):
-            article = Article.objects.get(slug=slug)
-            form = ArticleForm(instance=article)
-        else:
-            form = ArticleForm()
+@method_decorator(login_required, name='dispatch')
+class ArticleCreateView(CreateView):
+    model = Article
+    template_name = 'new_article.html'
+    form_class = ArticleForm
 
-    return render(request, 'new_article.html', {'authenticated': request.user.is_authenticated, 'form': form})
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['authenticated'] = self.request.user.is_authenticated
+        return context
+
+    def form_valid(self, form):
+        form.save()
+        return redirect(reverse("editar_articulo", kwargs={
+            'slug': form.instance.slug
+        }))
+
+@method_decorator(login_required, name='dispatch')
+class ArticleUpdateView(UpdateView):
+    model = Article
+    template_name = 'new_article.html'
+    form_class = ArticleForm
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['authenticated'] = self.request.user.is_authenticated
+        return context
+
+    def form_valid(self, form):
+        form.save()
+        return redirect(reverse("editar_articulo", kwargs={
+            'slug': form.instance.slug
+        }))
 
 
 def logout(request):
