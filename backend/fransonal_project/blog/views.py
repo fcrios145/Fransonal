@@ -27,7 +27,7 @@ class ArticleDetailView(DetailView):
         return context
 
 
-@method_decorator(login_required, name='dispatch')
+@method_decorator(login_required, name='dispatch' )
 class ArticleCreateView(CreateView):
     model = Article
     template_name = 'new_article.html'
@@ -76,10 +76,9 @@ class LoginView(View):
             password = form.cleaned_data['password']
 
             user = authenticate(username=username, password=password)
-
             if user is not None:
                 do_login(request, user)
-                return redirect('/')
+                return redirect(request.GET.get('next'))
         return render(request, 'login.html')
 
     def get(self, request, *args, **kwargs):
