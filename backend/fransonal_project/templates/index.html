@@ -9,16 +9,16 @@
         <div class="article-container">
             {% for article in articles %}
                 <a class="article" href="{% url 'articulo' slug=article.slug %}">
-                    <img class="image--article" src="{{ article.hero_image.url }}" alt="">
-                    <div class="article--content">
-                        <div class="article--header article--header--text">
-                            <span class="article--tag">{{ article.tags.all.first.name }}</span>
-                            <span class="article--date">{{ article.created_at }}</span>
+                    <img class="article__image" src="{{ article.hero_image.url }}" alt="">
+                    <div class="article__content">
+                        <div class="article__header">
+                            <span class="article__tag">{{ article.tags.all.first.name }}</span>
+                            <span class="article__date">{{ article.created_at | date:'F d Y' }}</span>
                         </div>
-                        <h4 class="article--title">{{ article.name }}</h4>
+                        <h4 class="article__title">{{ article.name }}</h4>
                         <p>{{ article.short_content }}</p>
-                        <div class="article--footer">
-                            <img class="article--author-avatar" src="{% static 'img/avatar_2.jpg' %}" alt="">
+                        <div class="article__footer">
+                            <img class="article__author-avatar" src="{% static 'img/avatar_2.jpg' %}" alt="">
                             <span>Francisco Rios</span>
                         </div>
                     </div>

@@ -7,11 +7,11 @@ class ArticleForm(ModelForm):
         model = Article
         fields = ['name', 'raw_content', 'status', 'hero_image', 'tags', 'short_content']
         widgets = {
-            'name': TextInput(attrs={'class': 'sidebar--control select-css'}),
-            'status': Select(attrs={'class': 'sidebar--control select-css'}),
-            'hero_image': FileInput(attrs={'class': 'sidebar--control select-css'}),
-            'tags': SelectMultiple(attrs={'class': 'sidebar--control sidebar--control--multiselect select-css'}),
-            'short_content': Textarea(attrs={'class': 'sidebar--control select-css'}),
+            'name': TextInput(attrs={'class': 'writter-sidebar__form__control writter-sidebar__form__control-black'}),
+            'status': Select(attrs={'class': 'writter-sidebar__form__control writter-sidebar__form__control-black'}),
+            'hero_image': FileInput(attrs={'class': 'writter-sidebar__form__control writter-sidebar__form__control-black'}),
+            'tags': SelectMultiple(attrs={'class': 'writter-sidebar__form__control sidebasr--control--multiselect writter-sidebar__form__control-black'}),
+            'short_content': Textarea(attrs={'class': 'writter-sidebar__form__control writter-sidebar__form__control-black'}),
             'raw_content': HiddenInput()
         }
         error_messages = {

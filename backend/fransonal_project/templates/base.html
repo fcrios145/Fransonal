@@ -8,7 +8,7 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'reset.css' %}">
     <link rel="stylesheet" href="{% static 'skeleton.css' %}">
-    <link rel="stylesheet" href="{% static 'nuevo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800,900&display=swap" rel="stylesheet">
     {% block extrastyles %}
     {% endblock %}
@@ -16,14 +16,14 @@
 </head>
 <body>
 {% block header %}
-    <header>
-        <nav class="container">
-            <h1>MztProgramming</h1>
-            <ul>
+    <header class="header">
+        <nav class="container header-nav">
+            <h1 class="header-nav__title">MztProgramming</h1>
+            <ul class="header-nav__menu">
                 {% if authenticated %}
-                    <li><a href="{% url 'nuevo_articulo' %}">Nuevo</a></li>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    <li class="header-nav__menu-item"><a href="{% url 'nuevo_articulo' %}">Nuevo</a></li>
+                    <li class="header-nav__menu-item"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="header-nav__menu-item"><a href="{% url 'logout' %}">Logout</a></li>
                 {% endif %}
             </ul>
         </nav>

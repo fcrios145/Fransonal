@@ -9,32 +9,13 @@
     {{ article.name }}
 {% endblock %}
 
-{% block header %}
-    <header>
-        <nav class="container">
-            <h1>MztProgramming</h1>
-            <ul>
-                {% if authenticated %}
-                    <li><a href="{% url 'nuevo_articulo' %}">Nuevo</a></li>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'editar_articulo' slug=article.slug %}">Editar</a></li>
-                    <li><a href="{% url 'logout' %}">Logout</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-    </header>
-{% endblock %}
+
 
 {% block content %}
     <img class="hero-image" src="{{ article.hero_image.url }}" alt="">
     <div class="container blog-container">
         <div class="row">
             {{ article.compiled_content | safe }}
-{#            <pre><code class="js">#}
-{#                console.log('asdasd');#}
-{#                alert('adsasd');#}
-{#            </code></pre>#}
-
         </div>
     </div>
 {% endblock %}
