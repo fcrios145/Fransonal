@@ -21,7 +21,7 @@ urlpatterns = [
     path('articulo/<slug:slug>', views.ArticleDetailView.as_view(), name='articulo'),
     path('editor', views.ArticleCreateView.as_view(), name='nuevo_articulo'),
     path('editor/<slug:slug>', views.ArticleUpdateView.as_view(), name='editar_articulo'),
-    path('login', views.login, name='login'),
+    path('login', views.LoginView.as_view(), name='login'),
     path('logout', views.logout, name='logout'),
 
 ]

@@ -44,6 +44,7 @@ class ArticleCreateView(CreateView):
             'slug': form.instance.slug
         }))
 
+
 @method_decorator(login_required, name='dispatch')
 class ArticleUpdateView(UpdateView):
     model = Article
@@ -67,23 +68,21 @@ def logout(request):
     return redirect('home')
 
 
-def login(request):
-    form = AuthenticationForm()
-    if request.method == 'POST':
+class LoginView(View):
+    def post(self, request, *args, **kwargs):
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
-            # Recuperamos las credenciales validadas
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
 
-            # Verificamos las credenciales del usuario
             user = authenticate(username=username, password=password)
 
-            # Si existe un usuario con ese nombre y contraseña
             if user is not None:
-                # Hacemos el login manualmente
                 do_login(request, user)
-                # Y le redireccionamos a la portada
                 return redirect('/')
+        return render(request, 'login.html')
 
-    return render(request, 'login.html')
+    def get(self, request, *args, **kwargs):
+        form = AuthenticationForm()
+        return render(request, 'login.html')
+
